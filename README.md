@@ -93,7 +93,3 @@ classDiagram
     Inscricao --> Participante : refere-se a
     Inscricao --> Evento : inscreve em
     Evento --> Local : ocorre em
-8. Status do Projeto
-[x] Atividade 1: Planejamento, Histórias de Usuário e Backlog.
-
-[x] Atividade 2: Implementação das 4 classes de domínio (Evento, Participante, Inscricao, Local) e execução do cenário no Main.java
