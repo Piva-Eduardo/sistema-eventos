@@ -54,3 +54,46 @@ Organizar eventos manualmente gera problemas de sobreposição de horários, exc
 * **Ferramenta:** ChatGPT / Gemini.
 * **Utilização:** Auxílio no brainstorm de funcionalidades do domínio de eventos e formatação do arquivo Markdown.
 * **Produção própria:** Definição do escopo, detalhamento dos problemas de negócio e priorização das tarefas do backlog.
+---
+
+## 7. Diagrama de Classes (Versão 1 - Encontro 2)
+
+```mermaid
+classDiagram
+    class Evento {
+        +String titulo
+        +String data
+        +String local
+        +int capacidadeMaxima
+        +int totalInscritos
+        +verificarVagas() boolean
+        +exibirDetalhes() void
+    }
+
+    class Participante {
+        +String nome
+        +String email
+        +String cpf
+        +exibirInformacoes() void
+    }
+
+    class Inscricao {
+        +int codigo
+        +String status
+        +confirmarInscricao() void
+    }
+
+    class Local {
+        +String nomeEspaco
+        +String endereco
+        +int capacidadeGeral
+        +exibirEspaco() void
+    }
+
+    Inscricao --> Participante : refere-se a
+    Inscricao --> Evento : inscreve em
+    Evento --> Local : ocorre em
+8. Status do Projeto
+[x] Atividade 1: Planejamento, Histórias de Usuário e Backlog.
+
+[x] Atividade 2: Implementação das 4 classes de domínio (Evento, Participante, Inscricao, Local) e execução do cenário no Main.java
